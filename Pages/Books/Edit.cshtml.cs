@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ianc_Andreea_Lab2.Data;
 using Ianc_Andreea_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ianc_Andreea_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Ianc_Andreea_Lab2.Data.Ianc_Andreea_Lab2Context _context;
